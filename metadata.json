@@ -1,0 +1,5 @@
+{
+  "name": "Smart Park Monitor",
+  "description": "A real-time parking monitoring dashboard for cars and motorcycles with AI-powered insights.",
+  "requestFramePermissions": []
+}
