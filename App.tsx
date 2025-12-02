@@ -11,7 +11,7 @@ import { LoginScreen } from './components/LoginScreen';
 import { generateParkingInsights, simulateTrafficScenario } from './services/geminiService';
 
 // Initialize spots
-const INITIAL_CARS = 50;
+const INITIAL_CARS = 62;
 const INITIAL_MOTOS = 31;
 
 const generateSpots = (): ParkingSpot[] => {
@@ -95,11 +95,18 @@ const App: React.FC = () => {
 
   // --- WebSocket Connection ---
   useEffect(() => {
+    // Dynamically determine WebSocket URL based on current protocol
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const host = window.location.host; // includes port if present
+    const wsUrl = process.env.NODE_ENV === 'production' 
+        ? `${protocol}//${host}` // In production, connect to same origin
+        : WS_URL; // In dev, use localhost:3001
+
     let ws: WebSocket;
     let reconnectTimeout: ReturnType<typeof setTimeout>;
 
     const connect = () => {
-        ws = new WebSocket(WS_URL);
+        ws = new WebSocket(wsUrl);
 
         ws.onopen = () => {
             console.log('Connected to Server');

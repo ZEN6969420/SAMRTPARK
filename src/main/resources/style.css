@@ -1,0 +1,80 @@
+
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.login-bg {
+    -fx-background-color: #0f172a;
+}
+
+.dashboard-bg {
+    -fx-background-color: #0f172a;
+}
+
+.header-bar {
+    -fx-background-color: #1e293b;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);
+}
+
+.logo-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.btn-lg {
+    -fx-padding: 15px;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-width: 1px;
+}
+
+.btn-admin {
+    -fx-background-color: #1e293b;
+    -fx-border-color: #6366f1;
+}
+
+.btn-admin:hover {
+    -fx-background-color: #312e81;
+}
+
+.btn-guest {
+    -fx-background-color: #1e293b;
+    -fx-border-color: #10b981;
+}
+
+.btn-guest:hover {
+    -fx-background-color: #064e3b;
+}
+
+.spot-free {
+    -fx-background-color: rgba(16, 185, 129, 0.2);
+    -fx-border-color: #059669;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-text-fill: #6ee7b7;
+    -fx-font-weight: bold;
+}
+
+.spot-occupied {
+    -fx-background-color: rgba(244, 63, 94, 0.2);
+    -fx-border-color: #e11d48;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-text-fill: #fda4af;
+    -fx-font-weight: bold;
+}
+
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #94a3b8;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #4f46e5;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+}
